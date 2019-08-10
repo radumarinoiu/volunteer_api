@@ -48,6 +48,9 @@ asii.use((req, res, next) => {
   next();
 });
 
+asii.get("/", (req, res) => {
+  res.send("volunteer api, go to <a href='/api/v1/volunteers'>/api/v1/volunteers</a>");
+});
 asii.use("/api/v1/volunteers", volunteersRouter);
 
 // ASII - Not Found 404
