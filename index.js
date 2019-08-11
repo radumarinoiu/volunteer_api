@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 5000;
 const asii = express();
 const volunteersRouter = require("./routes/volunteers");
+const authRoute = require("./routes/auth");
+const postsRouter = require("./routes/posts");
 // import db connection
 const db = require("./database/connection");
 
@@ -49,10 +51,13 @@ asii.use((req, res, next) => {
 });
 
 asii.get("/", (req, res) => {
-  res.send("volunteer api, go to <a href='/api/v1/volunteers'>/api/v1/volunteers</a>");
+  res.send(
+    "volunteer api, go to <a href='/api/v1/volunteers'>/api/v1/volunteers</a>"
+  );
 });
 asii.use("/api/v1/volunteers", volunteersRouter);
-
+asii.use("/api/v1/user", authRoute);
+asii.use("/api/v1/posts", postsRouter);
 // ASII - Not Found 404
 asii.use((req, res, next) => {
   const error = new Error("ASII is unable to manage the request!");
