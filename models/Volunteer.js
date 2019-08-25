@@ -13,9 +13,9 @@ const VolunteerSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  emailVerification: {
-    type: Boolean,
-    default: false
+  phoneNumber:{
+    type:String,
+    required:true
   },
   faculty: {
     type: String,
@@ -29,15 +29,26 @@ const VolunteerSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  bestQulity: {
-    type: String
+  bestQuality: {
+    type: String,
+    required:true
   },
   whyASII: {
-    type: String
+    type: String,
+    required:true
   },
-  departments: [String],
-  descriptionOfDepartments: [String],
-  hoursPerWeek: Number
+  departments: {
+    type:{},
+    required:true
+  },
+  descriptionOfDepartments: {
+    type:String,
+    required:true
+  },
+  hoursPerWeek: {
+    type:Number,
+    required:true
+  }
 });
 VolunteerSchema.plugin(timestamps);
 

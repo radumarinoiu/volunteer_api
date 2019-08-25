@@ -1,0 +1,1090 @@
+/* JLW_QS: John Lewis Wedding - Quote Summary (Choose a (cover) level) Redesign */
+#pageContent.JLW_QS {
+  font-size: 16px;
+  line-height: 1.3125;
+  color: #464646;
+  padding: 0;
+}
+.JLW_QS p {
+  font-size: inherit;
+  line-height: inherit;
+  color: #464646;
+  margin: 0 0 0.625em;
+}
+.JLW_QS h1,
+.JLW_QS h2,
+.JLW_QS h3,
+.JLW_QS h4 {
+  color: #5f5f5f;
+  font-family: "GillSansforJL";
+  line-height: 1;
+}
+.JLW_QS h1,
+.JLW_QS h2,
+.JLW_QS h3 {
+  font-weight: 300;
+}
+.JLW_QS h1 {
+  font-size: 3em;
+}
+.JLW_QS h2 {
+  font-size: 2.25em;
+  margin-bottom: 0.5555em;
+}
+.JLW_QS h3,
+.JLW_QS h4 {
+  font-size: 1.5em;
+}
+.JLW_QS ul {
+  list-style: disc;
+  margin-left: 1em;
+}
+.JLW_QS li {
+  line-height: 1.3125;
+  margin-bottom: 1em;
+}
+.JLW_QS a,
+.JLW_QS a label {
+  cursor: pointer;
+  color: #427730;
+  text-decoration: underline;
+}
+.JLW_QS a:hover,
+.JLW_QS a:focus,
+.JLW_QS a.focus {
+  color: #427730;
+  text-decoration: underline;
+}
+.JLW_QS a:visited {
+  color: #464646;
+}
+.JLW_QS input,
+.JLW_QS select {
+  font-size: inherit;
+  padding: 1em;
+  border-radius: 0.188em;
+  border-color: #bdbdbd;
+  flex-grow: 1;
+  outline: 0 !important;
+}
+.JLW_QS input::-webkit-input-placeholder,
+.JLW_QS input::-moz-placeholder,
+.JLW_QS input:-ms-input-placeholder,
+.JLW_QS input:-moz-placeholder {
+  color: #999;
+}
+.JLW_QS select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.JLW_QS label {
+  cursor: pointer;
+}
+.JLW_QS .angle-down {
+  pointer-events: none;
+  margin-left: -2.5em;
+  margin-top: 0.625em;
+  padding-top: 0.25em;
+  height: 2em;
+  width: 2.5em;
+  border-left: 0.063em solid #bdbdbd;
+  text-align: center;
+}
+.JLW_QS .angle-down .fa-angle-down {
+  font-size: 1.75em;
+}
+.JLW_QS input:disable {
+  cursor: auto;
+}
+.JLW_QS .btn.disabled {
+  background-color: #e6e3dd;
+}
+.JLW_QS .btn-style-01,
+.JLW_QS .btn-style-02,
+.JLW_QS .backBtnContainer {
+  background: #4aa851;
+  border-radius: 0.188em;
+  font-size: 1em;
+  float: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.375em;
+  padding: 0;
+  width: 25%;
+}
+.JLW_QS .btn-fixed-size .mid-slice {
+  min-width: 0;
+}
+.JLW_QS .backBtnContainer {
+  background: #b4b2ae;
+  position: relative;
+}
+.JLW_QS .btn-style-01 .right-slice,
+.JLW_QS .btn-style-01 .mid-slice,
+.JLW_QS .btn-style-02 .right-slice,
+.JLW_QS .btn-style-02 .mid-slice {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.JLW_QS .btn-style-01 .icn,
+.JLW_QS .btn-style-02 .icn {
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: normal;
+  padding: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+.JLW_QS .btn-style-01 .icn:after,
+.JLW_QS .btn-style-02 .icn:after,
+.JLW_QS .btn-style-02.btn-dd-back .icn:before {
+  content: "\f105";
+  font: normal normal normal 1.55em/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 0.5em;
+  color: #fff;
+}
+.JLW_QS .radios {
+  display: flex;
+  flex-flow: row wrap;
+}
+.JLW_QS .radios input[type="radio"],
+.JLW_QS .radios input[type="checkbox"],
+.JLW_QS #optionalExtrasQS input[type="checkbox"] {
+  display: none;
+}
+.JLW_QS .radios label {
+  margin-right: 1.25em;
+}
+.JLW_QS .radios input[type="radio"] + label {
+  background: #f9f8f6;
+  margin-right: 1.25em;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-grow: 1;
+  height: 3.125em;
+  border: 0.063em solid #999;
+  border-radius: 0.188em;
+}
+.JLW_QS .radios input[type="radio"] + label:last-of-type {
+  margin: 0;
+}
+.JLW_QS .radios input[type="radio"] + label:before {
+  content: " ";
+  height: 1.125em;
+  width: 1.125em;
+  margin: 0 1.25em 0 1.5em;
+  background-position: 0 -1.875em;
+}
+.JLW_QS .radios input[type="radio"]:checked + label {
+  background-color: #4aa851;
+  color: white;
+}
+.JLW_QS .radios input[type="radio"]:checked + label:before {
+  background-position: 0 0;
+}
+.JLW_QS .disableStep {
+  display: none;
+}
+.JLW_QS div.textBox {
+  margin: 0 0 2.5em !important;
+}
+.JLW_QS .addOnUpdatePremiumButton {
+  margin: 0;
+}
+.JLW_QS #preCoverLevel {
+  position: relative;
+}
+.JLW_QS .preCoverLevelSection,
+.JLW_QS .coverLevelsSection {
+  padding: 2.5em 1.25em;
+}
+.JLW_QS .coverLevelsSection,
+.JLW_QS .exclusionsSection {
+  border-bottom: 0.063em solid #b5b1ae;
+  margin-bottom: 2.5em;
+}
+.JLW_QS .exclusionsSection {
+  padding-bottom: 2.5em;
+}
+.JLW_QS .headerSection {
+  margin-bottom: 1.25em;
+}
+.JLW_QS .currentCoverLevel {
+  background: #f9f8f6;
+  padding: 1.25em;
+}
+.JLW_QS .currentCoverLevel div {
+  display: inline;
+}
+.JLW_QS .bigText {
+  font-size: 1.5em;
+  font-family: "GillSansforJL";
+  line-height: 1;
+}
+.JLW_QS #bodyCongratulations {
+  padding: 2.5em 2.5em 0;
+}
+.JLW_QS #preOptionalExtrasQS .overseas,
+.JLW_QS #preOptionalExtrasQS .additionalMarquee,
+.JLW_QS #preOptionalExtrasQS .selectMarqueePrice {
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+}
+.JLW_QS #preOptionalExtrasQS .radios {
+  padding-top: 1.25em;
+}
+.JLW_QS .coverLevelSectionChoose {
+  display: flex;
+  align-items: center;
+}
+.JLW_QS #chooseCoverLevelSection {
+  display: flex;
+  width: 50%;
+  margin-right: 2.5em;
+}
+.JLW_QS .seeAllLevelsOfCover {
+  padding: 0.625em 0;
+}
+.JLW_QS .helpLinks,
+.JLW_QS .exclusionsConfirmation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.JLW_QS .additionalMarquee {
+  padding-bottom: 1.25em;
+}
+.JLW_QS .selectMarqueePrice {
+  margin-top: 1.25em;
+}
+.JLW_QS .helpMessageBox {
+  border-top: 0.063em solid #fff;
+  padding-top: 1.25em;
+  margin-top: 1.25em;
+}
+.JLW_QS .helpMessage {
+  display: block;
+}
+.JLW_QS .helpOn {
+  background-color: #e1e9da;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+.JLW_QS #coverLevelsDetailsSection {
+  position: relative;
+}
+.JLW_QS #coverLevelsDetailsFooter,
+.JLW_QS #coverLevelsDetailsFooterRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.JLW_QS #coverLevelsDetailsFooter {
+  margin-top: 2.5em;
+}
+.JLW_QS #coverLevelsDetailsFooterRight {
+  width: 45%;
+}
+.JLW_QS #coverLevelsDetailsFooterRight .btn-style-01 {
+  width: 50%;
+}
+.JLW_QS .coverLevelsNavigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 100;
+  width: 102%;
+  top: 2.5em;
+  left: -0.625em;
+  pointer-events: none;
+}
+.JLW_QS .coverLevelsNavigation a {
+  background: #4aa851;
+  width: 2.5em;
+  height: 2.5em;
+  color: #fff;
+  border: 0.063em solid #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.JLW_QS .coverLevelsNavigation a i {
+  font-size: 2.5em;
+  margin-top: -0.05em;
+}
+.JLW_QS .coverLevelsNavigation .prevLevel i {
+  margin-left: -0.1em;
+}
+.JLW_QS .coverLevelsNavigation .nextLevel i {
+  margin-left: 0.1em;
+}
+.JLW_QS #coverLevelsDetails .owl-pagination {
+  display: none;
+}
+.JLW_QS .coverDetails {
+  border-radius: 0.188em;
+  border: 0.063em solid #bebebe;
+  border-bottom-width: 1em;
+  margin: 1.25em 0.625em;
+}
+.JLW_QS .coverDetails.selected {
+  border: 0.125em solid #4aa851;
+  border-bottom-width: 1em;
+  margin: 0 0.625em;
+}
+.JLW_QS .coverLevelHeader {
+  background: #bebebe;
+  color: #fff;
+  text-align: center;
+  padding: 0.625em 0;
+  cursor: pointer;
+}
+.JLW_QS .coverLevelHeader h3 {
+  color: #fff;
+  padding-bottom: 0.25em;
+}
+.JLW_QS .coverLevelHeader h3:last-child {
+  padding-bottom: 0;
+}
+.JLW_QS .coverDetails.selected .coverLevelHeader {
+  background: #4aa851;
+}
+.JLW_QS .coverDetails.selected .coverLevelHeader h3 {
+  font-weight: normal;
+}
+.JLW_QS .coverDetails.selected .fa-check {
+  color: #427730;
+}
+.JLW_QS .coverDetails.selected .fa-times {
+  color: #c00;
+}
+.JLW_QS .coverDetails.selected .closebtn .fa-times {
+  color: #fff;
+}
+.JLW_QS .coverDetails .benefit {
+  padding: 1.25em;
+}
+.JLW_QS .redesignW-IDD .coverDetails .benefit:nth-child(even) {
+  background: #f9f8f6;
+}
+.JLW_QS .coverDetails .benefitValue {
+  padding-left: 1.313em;
+}
+.JLW_QS .coverDetails .benefitValue div {
+  display: inline;
+}
+.JLW_QS .coverDetails .benefitValue .upTo {
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+.JLW_QS .coverDetails .optionalExtras {
+  margin: 1.25em 0;
+}
+.JLW_QS .coverDetails .optionalExtras .title {
+  padding: 0 1.25em;
+}
+.JLW_QS .coverDetails .addMarquee,
+.JLW_QS .coverDetails .overseasCover {
+  margin-top: 1.25em;
+  padding: 0 1.25em;
+}
+.JLW_QS .coverDetails .overseasCover {
+  margin-top: 2.5em;
+}
+.JLW_QS .coverDetails .marqueeCoverPrice {
+  font-weight: bold;
+  font-size: 0.95em;
+}
+.JLW_QS .coverDetails .marqueePrice {
+  background: #b3b2ae;
+  color: #fff;
+  text-align: center;
+  margin-top: 1.25em;
+}
+.JLW_QS .coverDetails .marqueePrice .closebtn {
+  text-align: right;
+  padding: 0.313em 0;
+}
+.JLW_QS .coverDetails .marqueePrice span {
+  color: #fff;
+}
+.JLW_QS .coverDetails .marqueePrice .tickbox {
+  padding: 0.625em;
+}
+.JLW_QS .coverDetails .marqueePrice .tickbox label {
+  justify-content: center;
+}
+.JLW_QS .optionalExtrasButtons label,
+.JLW_QS .optionalExtrasButtons a {
+  color: #427730;
+  text-decoration: underline;
+  margin-left: 0.75em;
+  padding-left: 0.75em;
+  border-left: 0.125em solid #bebebe;
+  cursor: pointer;
+}
+.JLW_QS .optionalExtrasButtons label:first-child,
+.JLW_QS .optionalExtrasButtons a:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+.JLW_QS .addedOverseasCover {
+  background: #b3b2ae;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+.JLW_QS .coverDetails.selected .addedOverseasCover .fa-check {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+.JLW_QS #exclusions h3 {
+  padding: 0.833em 0;
+}
+.JLW_QS .exclusionsConfirmation {
+  margin-top: 2.5em;
+}
+.JLW_QS .exclusionsConfirmation label {
+  background: #b3b2ae;
+  padding: 0.5em 2em;
+}
+.JLW_QS .exclusionsConfirmation .tickbox .check {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1.5em;
+}
+.JLW_QS .tickbox [type="checkbox"],
+.JLW_QS .tickbox [type="radio"],
+.JLW_QS .tickbox .check .fa-check,
+.JLW_DCredesign .tickbox [type="checkbox"],
+.JLW_DCredesign .tickbox .check .fa-check {
+  display: none;
+}
+.JLW_QS .tickbox label {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.JLW_DCredesign .tickbox label {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  padding-left: 320px;
+  margin-top: -20px;
+}
+.JLW_QS .tickbox .check {
+  color: #fff;
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.625em;
+  border: 0.063em solid #fff;
+  padding: 0.188em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.JLW_DCredesign .tickbox .check {
+  color: #fff;
+  display: block;
+  width: 1em;
+  height: 0.9em;
+  margin-right: 0.625em;
+  border: 0.13em solid #ccc;
+  padding: 0.188em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.JLW_QS .tickbox .check .fa-check {
+  color: #fff;
+}
+.JLW_DCredesign .tickbox .check .fa-check {
+  color: #222;
+}
+.JLW_QS .tickbox [type="checkbox"]:checked ~ label .check .fa-check,
+.JLW_DCredesign .tickbox [type="checkbox"]:checked ~ label .check .fa-check,
+.JLW_QS .tickbox [type="radio"]:checked ~ label .check .fa-check {
+  display: block;
+}
+.JLW_QS .qsEmailButtonSection {
+  margin-top: 2.5em;
+  padding: 0;
+  border: 0;
+} /* overlay */
+.JLW_QS .overlay {
+  height: 100%;
+  width: 0;
+  border-radius: 0;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  left: 0 !important;
+}
+.JLW_QS .hidden {
+  display: none;
+}
+.JLW_QS .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 70em;
+  background-color: white;
+}
+.JLW_QS .closebtn {
+  font-size: 1em;
+  margin-right: 0.625em;
+  cursor: pointer;
+}
+.JLW_QS .overlay.show {
+  width: 100%;
+}
+.JLW_QS #moreInfoOverlayHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #427731;
+  padding: 1.25em 0 1.25em 25%;
+}
+.JLW_QS #moreInfoOverlayHeader h3,
+.JLW_QS #moreInfoOverlayHeader i {
+  color: white;
+  font-weight: normal;
+}
+.JLW_QS #moreInfoOverlayContent {
+  padding: 1.25em 5% 1.25em 25%;
+  font-size: 87.5%;
+}
+.emailMeOverlay .overlay {
+  width: 860px;
+}
+.documentsAndInformation {
+  background: #f9f8f6;
+  padding: 20px;
+  float: left;
+}
+.documentsAndInformation ~ #legal {
+  width: auto;
+  margin: 0;
+  padding: 40px 20px;
+}
+.documentsAndInformation h3 {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "GillSansforJL";
+  line-height: 1;
+  color: #5f5f5f;
+  border-bottom: 1px solid #dedbd2;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.documentsAndInformation .documentsList {
+  float: left;
+  width: 665px;
+}
+.documentsAndInformation .documentsList h2:first-of-type {
+  display: none;
+}
+.documentsAndInformation .documentsList .linksList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.documentsAndInformation .documentsList .linksList .idl {
+  width: 200px;
+  padding: 0 0 40px !important;
+}
+.documentsAndInformation .documentsList .linksList .idl:nth-child(3n + 1) {
+  width: 260px;
+}
+.documentsAndInformation .documentsList .linksList .idl a {
+  text-decoration: none;
+  color: #464646;
+  font-size: 16px;
+  line-height: 1.3125;
+}
+.documentsAndInformation .callUs,
+.documentsAndInformation .verifiedLogosWrapper {
+  float: right;
+  width: 235px;
+}
+.documentsAndInformation .callUs {
+  display: flex;
+  flex-direction: column;
+  color: #5f5f5f;
+}
+.documentsAndInformation .callUs span {
+  font-size: 24px;
+  font-family: "GillSansforJL";
+  font-weight: 300;
+  line-height: 1;
+}
+.documentsAndInformation .callUs span {
+  margin-bottom: 10px;
+}
+.documentsAndInformation .callUs span:last-of-type {
+  margin-bottom: 0;
+}
+.documentsAndInformation .verifiedLogosWrapper {
+  height: auto;
+  margin: 25px auto 0;
+}
+.documentsAndInformation .verifiedLogosWrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.documentsAndInformation .verifiedLogosWrapper a.mastercardLink,
+.documentsAndInformation .verifiedLogosWrapper a.visaLink,
+.documentsAndInformation .verifiedLogosWrapper a.verisignLink {
+  width: auto;
+}
+.documentsAndInformation .verifiedLogosWrapper a.mastercardLink img,
+.documentsAndInformation .verifiedLogosWrapper a.visaLink img,
+.documentsAndInformation .verifiedLogosWrapper a.verisignLink img {
+  width: 65px;
+} /* .JLW_DCredesign: John Lewis Wedding - Details Capture Redesign */
+#pageContent .JLW_DCredesign {
+  margin: 20px auto 40px;
+  float: none;
+}
+.JLW_DCredesign #detailsCaptureYourWedding-section {
+  padding-top: 10px;
+}
+.JLW_DCredesign span.asterisk {
+  display: none;
+}
+.JLW_DCredesign .formSection.wHeading h3 {
+  background-image: none;
+  background-color: #f9f8f6;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "GillSansforJL";
+  color: #464646;
+  border: 1px solid #c9c9c9;
+  border-bottom: none;
+  border-top: none;
+}
+.JLW_DCredesign .required-fields {
+  display: none;
+}
+.JLW_DCredesign #detailsCapture .wrapperA {
+  background-image: none;
+  background-color: #427730;
+}
+.JLW_DCredesign #detailsCapture .wrapperA h2 {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "GillSansforJL";
+  padding: 20px 26px;
+}
+.petBoxName input {
+  display: block;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#emailMeAddress {
+  width: 640px;
+}
+.JLW_DCredesign .resetMargins {
+  clear: both;
+  display: block !important;
+  font-size: small;
+}
+.JLW_QS #emailSentPrompt ul.formInputs {
+  list-style-type: none;
+}
+.JLW_DCredesign .formSection .formInputs .noBackgroundImg {
+  background-image: none;
+}
+.JLW_newFooter #block1 .wrapper1:nth-of-type(2),
+.JLW_newFooter #block1 .verifiedLogosWrapper,
+.quoteAndBuy_confirmation .JLW_newFooter #block1 .verisignLinkSingle,
+.quoteAndBuy_confirmation .JLW_newFooter #sidePanel1 {
+  display: none;
+}
+.quoteAndBuy_confirmation .JLW_newFooter #block1 .verifiedLogosWrapper {
+  display: block;
+}
+.JLW_QS #sticky-header {
+  width: 920px;
+}
+.JLW_QS #sticky-header.fixed {
+  display: block;
+  position: fixed;
+  top: 2%;
+  z-index: 10;
+}
+#sticky-header .owl-pagination,
+#sticky-header {
+  display: none;
+}
+.JLW_QS .insurancePremiumTax {
+  float: right;
+}
+.JLW_QS #coverLevelsDetailsFooter {
+  margin-bottom: 1em;
+}
+.JLW_QS .coverLevelsSection {
+  padding-bottom: 3.5em;
+}
+#disclaimer_banner {
+  background: #464646;
+  height: auto;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 1em;
+  z-index: 100;
+  width: 80%;
+  margin: 0 10%;
+}
+#disclaimer_banner p {
+  float: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  color: #fff;
+  font-size: 1.1em;
+}
+#disclaimer_banner span.close {
+  float: left;
+  top: 0.9em;
+  right: 7%;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: #fff;
+}
+#disclaimer_banner a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+}
+@media only screen and (max-device-width: 1024px) {
+  #disclaimer_banner span.close {
+    right: 2em;
+    background-color: #fff;
+  }
+  #disclaimer_banner {
+    width: auto;
+  }
+}
+#preOptionalExtrasQS
+  > div.marquee
+  > div.additionalMarquee.fieldWithHelp
+  > div.helpLinks {
+  float: right;
+  margin-top: 10px;
+}
+.JLW_QS .redesignW-IDD .coverLevelHeader {
+  background: #4aa851;
+}
+.JLW_QS .coverDetails.ineligiblePackages .coverLevelHeader {
+  pointer-events: none;
+  background-color: #d9d9d9;
+}
+.JLW_QS .coverDetails.ineligiblePackages {
+  opacity: 0.7;
+}
+.JLW_QS .redesignW-IDD div.coverDetails:not(.ineligiblePackages) {
+  border: 0.125em solid #4aa851;
+  border-bottom-width: 1em;
+}
+.JLW_QS .redesignW-IDD div.coverDetails.selected {
+  border: 0.125em solid #284934;
+  border-bottom-width: 1em;
+}
+.JLW_QS .redesignW-IDD .coverDetails.selected .coverLevelHeader {
+  background: #284934;
+}
+.JLW_QS .redesignW-IDD div.currentCoverLevel span.coverLevel.bigText {
+  display: block;
+  margin-bottom: 20px;
+}
+.JLW_QS .redesignW-IDD .coverDetails .coverLevelHeader.first-row {
+  padding: 1.5em 0;
+  border-bottom: 1px solid;
+}
+.JLW_QS .redesignW-IDD .coverDetails.selected .coverLevelHeader.first-row {
+  padding: 2em 0;
+}
+.JLW_QS .redesignW-IDD .coverDetails .select-cover {
+  background: #f9f8f6;
+  padding-top: 1.5em;
+}
+.JLW_QS .redesignW-IDD .coverDetails .select-cover > h3 {
+  color: #3c3c3c;
+  font-weight: normal;
+  font-size: 2em;
+}
+.JLW_QS .redesignW-IDD .btn-style-01.btn-cover {
+  background: #4aa851;
+  border-radius: 0.188em;
+  font-size: 1em;
+  float: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.375em;
+  padding: 0;
+  width: 65%;
+  margin: 1em auto;
+}
+.JLW_QS .redesignW-IDD .ineligiblePackages .btn-style-01.btn-cover {
+  background: #bebebe;
+}
+.JLW_QS .redesignW-IDD .btn-style-01.btn-cover .right-slice,
+.JLW_QS .redesignW-IDD .coverDetails.selected .select-cover > h3 {
+  color: #fff;
+}
+.JLW_QS .redesignW-IDD .coverDetails .marqueeCoverPrice {
+  font-weight: bold;
+  font-size: 0.95em;
+  display: block;
+  padding-left: 1.313em;
+}
+.redesignW-IDD .marqueeCover .optionalExtrasButtons {
+  padding-left: 1.313em;
+}
+.redesignW-IDD .overseasCover .optionalExtrasButtons {
+  display: inline;
+  padding-left: 0.5em;
+}
+.JLW_QS .overseasCover .optionalExtrasButtons label {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+}
+.redesignW-IDD .display-block {
+  display: block;
+  padding-left: 1.313em;
+}
+.ndStatement {
+  margin-top: 40px;
+  background-color: #f5f6f1;
+}
+.ndStatement > p {
+  padding: 2em 2em 2em 1.5em;
+  line-height: 1.4em;
+}
+.JLW_QS .currentCoverLevel.exclusion,
+.JLW_QS .exclusionsSection .currentCoverLevel,
+.owl-wrapper-outer .coverLevelHeader input {
+  display: none;
+}
+.redesignW-IDD .currentCoverLevel.padingLR15 {
+  margin-bottom: 3em;
+}
+.JLW_QS .exclusionsSection .currentCoverLevel.exclusion,
+.JLW_MQJ #exclusions div.currentCoverLevel.exclusion {
+  display: block;
+}
+#exclusions > div > div.exclusionsExcessCoverLevel.padingLR15 {
+  margin-top: 1.5em;
+}
+#paymentYourAgreement-section .agreeWithStatements .scrollBox2 {
+  overflow: hidden;
+  height: auto !important;
+}
+#paymentYourAgreement-section .agreeWithStatements .scrollBox2 .list {
+  margin-top: 1.5em;
+}
+#postalDocumentsContent .emailOrPostContent > p {
+  padding: 5px 26px 30px;
+}
+#field_confirDocPreference .helpIcon {
+  display: none;
+}
+#field_confirDocPreference {
+  background-image: none;
+}
+.JLW_QS .coverDetails.selected .overseasCover {
+  margin-top: 1.5em;
+}
+.removeAdd #addMarqueePriceBtn,
+.removeAdd > div.overseasCover > div > label:nth-child(2) {
+  display: none;
+}
+@media only screen and (max-width: 736px) {
+  .ndStatement > p {
+    padding-right: 1.5em;
+  }
+  .JLW_MQJ #block2 .formSection #postalDocumentsContent .emailOrPostContent {
+    padding-bottom: 30px;
+  }
+  .JLW_MQJ
+    #block2
+    .formSection
+    #postalDocumentsContent
+    .error
+    .emailOrPostContent
+    > p,
+  .JLW_MQJ #block2 .formSection #postalDocumentsContent li.error label {
+    color: #c00;
+  }
+}
+
+.JLW_QS div.textBox.label {
+  margin-bottom: 1em;
+}
+.JLW_QS div.textBox.labelCover {
+  margin: 0 0 1.5em !important;
+}
+
+.coverLevelSectionChoose {
+  padding-top: 1em;
+}
+
+.marqueeCoverQuestion {
+  margin-bottom: 1.5em;
+}
+
+.error .errorMessage {
+  padding: 15px 0 0;
+  width: 100%;
+}
+
+.error .errorTop {
+  margin: 0;
+  padding: 1.5em 0 0;
+  border-top: 1px solid #fff;
+  width: auto;
+}
+
+.error .errorContent p {
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.3571;
+}
+
+.error {
+  flex-wrap: wrap;
+  width: calc(100% + 5em);
+  background-color: #ffdddd;
+  padding: 1.5em 2.5em;
+  margin-left: -2.5em;
+  box-sizing: border-box;
+}
+
+.JLW_QS .radios {
+  justify-content: space-between;
+}
+
+.notYourResponsability {
+  padding-top: 0.625em;
+  clear: both;
+}
+
+.container_pre_marquee_cover {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 1.5em;
+  justify-content: space-between;
+}
+
+.JLW_QS .radios .container_pre_marquee_cover input[type="radio"] + label,
+.JLW_QS .radios input[type="radio"] + label {
+  min-width: calc(50% - 0.75em);
+  max-width: calc(50% - 0.75em);
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.radios.agreeEligibility {
+  margin-top: 1.25em;
+}
+.eligibility {
+  padding: 0 2.5em;
+}
+
+.eligibility h3 {
+  margin-bottom: 1.5em;
+  font-weight: inherit;
+}
+
+.eligibility ul li {
+  padding-left: 0.5em;
+  margin-left: 0.625em;
+  line-height: 1.3125;
+  margin-bottom: 0.5em;
+}
+
+.eligibility p {
+  margin: 2em 0 0.625em 0.625em;
+}
+
+.JLW_QS .btn-style-01.download-btn .icn:after,
+.JLW_QS .btn-style-01.download-btn .icn:before {
+  display: none;
+}
+.JLW_QS .optionalExtrasButtons label,
+.JLW_QS .optionalExtrasButtons a {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+}
+.hidden-element {
+  visibility: hidden;
+}
+// dd
+.JLW_QS .exclusionsConfirmation{
+    flex-wrap: wrap;
+}
+.JLW_QS .exclusionsConfirmation .tickbox{
+    margin-right: auto;
+}
+.JLW_QS .exclusionsConfirmation .btn-style-01{
+    margin-left: auto;
+}
+.nextButtonContainer{
+    display: block;
+    width: 100%;
+}
+.JLW_QS .nextButtonContainer .btn-style-01{
+    float: right !important;
+}
+.chosenOptions ul{
+    margin-left: 1.5em;
+}
+// dd
+
+@media only screen and (max-width: 960px) {
+  .JLW_QS .radios .container_pre_marquee_cover input[type="radio"] + label,
+  .JLW_QS .radios input[type="radio"] + label {
+    min-width: inherit;
+    max-width: inherit;
+    width: 100%;
+    margin: 0 0 1.5em;
+  }
+
+  .container_pre_marquee_cover {
+    display: block;
+    margin-bottom: 0;
+  }
+}
