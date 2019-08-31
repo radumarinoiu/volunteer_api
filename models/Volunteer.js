@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 const timestamps = require("mongoose-timestamp");
 const VolunteerSchema = mongoose.Schema({
-  firstName: {
-    type: String,
-    required: true
-  },
-  lastName: {
+  name: {
     type: String,
     required: true
   },
@@ -19,10 +15,6 @@ const VolunteerSchema = mongoose.Schema({
   },
   faculty: {
     type: String,
-    required: true
-  },
-  yearOfStudy: {
-    type: Number,
     required: true
   },
   description: {
@@ -39,10 +31,6 @@ const VolunteerSchema = mongoose.Schema({
   },
   departments: {
     type:{},
-    required:true
-  },
-  descriptionOfDepartments: {
-    type:String,
     required:true
   },
   hoursPerWeek: {
