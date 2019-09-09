@@ -38,7 +38,7 @@ const VolunteerSchema = mongoose.Schema({
     required: true
   },
   comments: {
-    type: {}
+    type: []
   }
 });
 VolunteerSchema.plugin(timestamps);
