@@ -9,9 +9,9 @@ const VolunteerSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  phoneNumber:{
-    type:String,
-    required:true
+  phoneNumber: {
+    type: String,
+    required: true
   },
   faculty: {
     type: String,
@@ -23,19 +23,22 @@ const VolunteerSchema = mongoose.Schema({
   },
   bestQuality: {
     type: String,
-    required:true
+    required: true
   },
   whyASII: {
     type: String,
-    required:true
+    required: true
   },
   departments: {
-    type:{},
-    required:true
+    type: {},
+    required: true
   },
   hoursPerWeek: {
-    type:Number,
-    required:true
+    type: Number,
+    required: true
+  },
+  comments: {
+    type: {}
   }
 });
 VolunteerSchema.plugin(timestamps);
