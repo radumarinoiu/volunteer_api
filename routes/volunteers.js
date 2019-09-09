@@ -64,16 +64,6 @@ router.post("/", (req, res, next) => {
 });
 
 router.patch("/:id", (req, res) => {
-  User.findById(id, function (err, user) {
-    if (err) reject(err);
-    for (let i in userData) {
-        user[i] = userData[i];
-    }
-    user.save(function (err, updatedUser) {
-        if (err) return reject(err);
-        resolve(updatedUser);
-    });
-});
   Volunteer.findById(req.params.id,(err,volunteer)=>{
     if (err) {
       res.status(400).json({
