@@ -64,31 +64,20 @@ router.post("/", (req, res, next) => {
 });
 
 router.patch("/:id", (req, res) => {
-  Volunteer.findById(req.params.id,(err,volunteer)=>{
-    if (err) {
+  Volunteer.findById(req.params.id, (err, vol) => {
+    if (err)
       res.status(400).json({
-        message: "Tshe volunteer was not updated",
+        message: "The volunteer was not updated",
         errorMessage: err.message
       });
-    }else{
-      for(let i in req.body){
-        volunteer[i] = req.body[i]
-      }
-
-      Volunteer.save(err => {
-        if (err) {
-          res.status(400).json({
-            message: "The volunteer was not found",
-            errorMessage: err.message
-          });
-        } else {
-          res.status(201).json({
-            message: "Item was updated successfully"
-          });
-        }
-      })
+    for (let i in req.body) {
+      vol[i] = req.body[i];
     }
-  })
+    vol.save((err, userA) => {
+      if (err) return res.status(400);
+      res.status(201).json({ msg: "Volunteer updated" });
+    });
+  });
 });
 router.put("/:id", (req, res, next) => {
   const updateVolunteer = Volunteer.findByIdAndUpdate(
@@ -99,7 +88,7 @@ router.put("/:id", (req, res, next) => {
     (err, volunteer) => {
       if (err) {
         res.status(400).json({
-          message: "Tshe volunteer was not updated",
+          message: "The volunteer was not updated",
           errorMessage: err.message
         });
       } else {
