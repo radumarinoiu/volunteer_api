@@ -74,7 +74,7 @@ router.patch("/:id", (req, res) => {
       vol[i] = req.body[i];
     }
     vol.save((err, userA) => {
-      if (err) return res.status(400);
+      if (err) return res.status(400).json({'msg':'nu s-a updatat'});
       res.status(201).json({ msg: "Volunteer updated" });
     });
   });
