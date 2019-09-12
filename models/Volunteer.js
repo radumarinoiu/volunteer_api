@@ -40,7 +40,10 @@ const VolunteerSchema = mongoose.Schema({
   comments: {
     type: []
   },
-  status: ""
+  status: {
+    type: String,
+    default: 'guitarist' 
+  }
 });
 VolunteerSchema.plugin(timestamps);
 
