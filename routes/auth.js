@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config();
-
+const verify = require("./verifyToken");
 router.get("/", (req, res) => {
   const users = User.find({}, (err, users) => {
     if (err) {
@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
     }
   });
 });
+router.get("/verify", verify, (req, res) => {});
 
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
@@ -45,8 +46,6 @@ router.post("/register", async (req, res) => {
     res.status(400).send(err);
   }
 });
-
-
 
 router.post("/login", async (req, res) => {
   // Validate data before login

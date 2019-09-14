@@ -15,7 +15,7 @@ asii.use(bodyParser.urlencoded({ extended: false }));
 asii.use(bodyParser.json());
 
 //  CORS
-
+asii.use(cors());
 // Connect to Database
 mongoose
   .connect(db.connection, { useNewUrlParser: true })
@@ -56,7 +56,7 @@ asii.get("/", (req, res) => {
   );
 });
 asii.use("/api/v1/volunteers", volunteersRouter);
-asii.use("/api/v1/user", authRoute);
+asii.use("/api/v1/users", authRoute);
 asii.use("/api/v1/posts", postsRouter);
 // ASII - Not Found 404
 asii.use((req, res, next) => {
