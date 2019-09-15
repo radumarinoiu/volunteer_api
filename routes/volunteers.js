@@ -70,7 +70,7 @@ router.get("/email-check/:email", (req, res) => {
         exist: true
       });
     } else {
-      res.status(404).json({
+      res.status(200).json({
         exist: false
       });
     }
