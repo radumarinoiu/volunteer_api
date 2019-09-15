@@ -63,6 +63,19 @@ router.post("/", (req, res, next) => {
   });
 });
 
+router.get("/email-check/:email", (req, res) => {
+  Volunteer.findOne({ email: req.params.email }, (err, vol) => {
+    if (vol !== null) {
+      res.status(200).json({
+        exist: true
+      });
+    } else {
+      res.status(404).json({
+        exist: false
+      });
+    }
+  });
+});
 router.patch("/:id", (req, res) => {
   Volunteer.findById(req.params.id, (err, vol) => {
     if (err)
@@ -74,7 +87,7 @@ router.patch("/:id", (req, res) => {
       vol[i] = req.body[i];
     }
     vol.save((err, userA) => {
-      if (err) return res.status(400).json({'msg':'nu s-a updatat'});
+      if (err) return res.status(400).json({ msg: "nu s-a updatat" });
       res.status(201).json({ msg: "Volunteer updated" });
     });
   });
