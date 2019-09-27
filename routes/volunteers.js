@@ -119,12 +119,12 @@ router.put("/:id", (req, res, next) => {
   );
 });
 
-router.put("/extract-data", (req, res, next) => {
+router.get("/extract-data", (req, res, next) => {
   Volunteer.find({}, (err, volunteers) => {
     if (err) {
       throw err;
     } else {
-      require('fs').writeFileSync('../data.json', JSON.stringify(volunteers));
+      require('fs').writeFileSync('data.json', JSON.stringify(volunteers));
       res.status(200).json({
         total: volunteers.length,
         volunteers
