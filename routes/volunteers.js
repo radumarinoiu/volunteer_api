@@ -51,13 +51,15 @@ router.post("/", (req, res, next) => {
   const newVolunteer = new Volunteer(req.body);
   newVolunteer.save(err => {
     if (err) {
-      res.status(400).json({
+      const error = {
         message: "The volunteer was not found",
         errorMessage: err.message
-      });
+      };
+      console.error(error);
+      res.status(400).json(error);
     } else {
       res.status(201).json({
-        message: "Item was  created   successfully"
+        message: "Item was  created successfully"
       });
     }
   });
@@ -78,11 +80,14 @@ router.get("/email-check/:email", (req, res) => {
 });
 router.patch("/:id", (req, res) => {
   Volunteer.findById(req.params.id, (err, vol) => {
-    if (err)
-      res.status(400).json({
+    if (err) {
+      const error = {
         message: "The volunteer was not updated",
         errorMessage: err.message
-      });
+      };
+      console.error(error);
+      res.status(400).json(error);
+    }
     for (let i in req.body) {
       vol[i] = req.body[i];
     }
