@@ -34,7 +34,7 @@ const VolunteerSchema = mongoose.Schema({
     required: true
   },
   hoursPerWeek: {
-    type: Number,
+    type: String,
     required: true
   },
   comments: {
