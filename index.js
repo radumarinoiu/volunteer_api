@@ -83,4 +83,4 @@ asii.use((err, req, res, next) => {
   });
 });
 
-asii.listen(PORT, console.log(`Server is running at port : ${PORT}`));
+asii.listen(PORT || 5000, console.log(`Server is running at port : ${PORT}`));

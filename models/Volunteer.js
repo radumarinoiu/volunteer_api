@@ -37,6 +37,10 @@ const VolunteerSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  selectedDepartments: {
+    type: Array,
+    required: false
+  },
   comments: {
     type: []
   },
