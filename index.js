@@ -3,13 +3,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 5000;
+const rateLimit = require("express-rate-limit");
 const asii = express();
 const volunteersRouter = require("./routes/volunteers");
 const authRoute = require("./routes/auth");
 const postsRouter = require("./routes/posts");
 // import db connection
 const db = require("./database/connection");
+
+const PORT = process.env.PORT;
 
 asii.use(bodyParser.urlencoded({ extended: false }));
 asii.use(bodyParser.json());
@@ -18,13 +20,19 @@ asii.use(bodyParser.json());
 asii.use(cors());
 // Connect to Database
 mongoose
-  .connect(db.connection, { useNewUrlParser: true })
+  .connect(db.connection)
   .then(conn => console.log("ASII Is ON."))
   .catch(err => {
     const { name, message, code, codeName } = err;
     console.error("DB:", db);
     console.error({ error: { name, message, code, codeName } });
   });
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+asii.use(limiter);
 
 // Middleware
 asii.use((req, res, next) => {
