@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+const dotenv_result = require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -12,6 +12,8 @@ const postsRouter = require("./routes/posts");
 const db = require("./database/connection");
 
 const PORT = process.env.PORT;
+
+console.log(dotenv);
 
 asii.use(bodyParser.urlencoded({ extended: false }));
 asii.use(bodyParser.json());
