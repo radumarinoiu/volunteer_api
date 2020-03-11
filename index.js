@@ -13,7 +13,7 @@ const db = require("./database/connection");
 
 const PORT = process.env.PORT;
 
-console.log(dotenv);
+console.log(dotenv_result);
 
 asii.use(bodyParser.urlencoded({ extended: false }));
 asii.use(bodyParser.json());
